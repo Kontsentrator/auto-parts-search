@@ -1,12 +1,15 @@
+import TextBox from '@/components/ui/TextBox';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [number, setNumber] = useState('');
+
   return (
     <main className="container py-5">
       <h1 className="h3">Поиск автозапчастей</h1>
-      <p className="text-secondary">
-        Приложение готово к разработке.
-      </p>
+
+      <TextBox placeholder="Номер автозапчасти" value={number} onChange={setNumber} />
     </main>
   )
 };
